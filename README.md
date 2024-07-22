@@ -11,7 +11,7 @@ E una aplicación de gestión de usuarios y fotos donde los usuarios pueden subi
 ## Configuración
 
 1. Clona este repositorio:
-   git clone https://github.com/tu-usuario/proyecto.git
+   git clone https://github.com/paaardo/PROYECTO8-IKERPARDO
    cd PROYECTO8-IKERPARDO
 
 2. Cargar semilla:
