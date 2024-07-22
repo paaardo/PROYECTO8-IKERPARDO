@@ -10,11 +10,9 @@ mongoose
   .then(async () => {
     console.log('Conectado a MongoDB')
 
-    // Eliminar todos los usuarios
     await Usuario.deleteMany({})
     console.log('Usuarios eliminados')
 
-    // Crear nuevos usuarios
     const usuarios = [
       {
         nombre: 'Iker Pardo',
