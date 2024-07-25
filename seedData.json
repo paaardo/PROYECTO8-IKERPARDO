@@ -1,0 +1,24 @@
+{
+  "usuarios": [
+    {
+      "nombre": "Iker Pardo",
+      "email": "iker@pardo.com",
+      "password": "123456"
+    },
+    {
+      "nombre": "Josue Martinez",
+      "email": "josue@martinez.com",
+      "password": "654321"
+    },
+    {
+      "nombre": "Cristiano Ronaldo",
+      "email": "cristiano@ronaldo.com",
+      "password": "siuuuuuu"
+    }
+  ],
+  "imagenesReales": [
+    "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+    "https://res.cloudinary.com/demo/image/upload/v1623427689/cld-sample.jpg",
+    "https://res.cloudinary.com/demo/image/upload/v1623427690/cld-sample-2.jpg"
+  ]
+}

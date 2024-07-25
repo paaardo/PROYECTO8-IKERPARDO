@@ -26,7 +26,7 @@ GET /api/usuarios - Obtener todos los usuarios.
 POST /api/usuarios - Crear un nuevo usuario.
 GET /api/usuarios/:id - Obtener un usuario por su ID.
 PUT /api/usuarios/:id - Actualizar un usuario por su ID.
-DELETE /api/usuarios/:id - Elimina un usuario
+DELETE /api/usuarios/:id - Elimina un usuario y las fotos subidas por el mismo
 
 GET /api/fotos - Obtener todas las fotos.
 POST /api/fotos - Subir una nueva foto.

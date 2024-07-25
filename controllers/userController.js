@@ -1,4 +1,6 @@
 const Usuario = require('../models/user')
+const Foto = require('../models/foto')
+const cloudinary = require('../utils/cloudinary')
 
 exports.crearUsuario = async (req, res) => {
   try {
@@ -48,11 +50,19 @@ exports.actualizarUsuario = async (req, res) => {
 
 exports.eliminarUsuario = async (req, res) => {
   try {
-    const usuario = await Usuario.findByIdAndDelete(req.params.id)
+    const usuario = await Usuario.findByIdAndDelete(req.params.id).populate(
+      'fotos'
+    )
     if (!usuario) {
       return res.status(404).send({ mensaje: 'Usuario no encontrado' })
     }
-    res.send({ mensaje: 'Usuario eliminado' })
+
+    for (const foto of usuario.fotos) {
+      await cloudinary.uploader.destroy(foto.public_id)
+      await Foto.findByIdAndDelete(foto._id)
+    }
+
+    res.send({ mensaje: 'Usuario y sus fotos eliminados' })
   } catch (error) {
     res.status(500).send(error)
   }
