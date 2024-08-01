@@ -1,6 +1,6 @@
 const Usuario = require('../models/user')
-const Foto = require('../models/foto')
-const cloudinary = require('../utils/cloudinary')
+const Foto = require('../models/photo')
+const cloudinary = require('../middleware/cloudinary')
 
 exports.crearUsuario = async (req, res) => {
   try {
